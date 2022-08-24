@@ -1,0 +1,97 @@
+body, ul, li, p {
+    margin: 0px;
+    padding: 0px;  
+    list-style: none;
+    font-size: large;
+    font-family: Arial;
+}
+
+body {
+    margin-bottom: 400px;
+}
+
+a {
+    text-decoration: none;
+    color: blue;    
+}
+
+p {
+    background-color: yellow;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 50px;
+    color: blue;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.header {
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 20px;
+}
+
+.menu {
+     display: flex;
+     
+}
+
+.menu li {
+    margin-left: 20px;
+}
+
+.menu li a {
+    display: block;
+    padding: 10px;
+    background-color: yellow;
+}
+
+.grid p {
+    color: blue;
+    text-decoration: underline;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 800px;
+    margin: 0 auto;
+    grid-gap: 20px;
+    padding: 10px;
+}
+
+.grid div:nth-child(n + 4) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    align-items: center;
+}
+
+.grid div.anuncio {
+    grid-column: 1;
+    grid-row: 2 / 5;
+    display: block;
+}
+
+@media (max-width: 600px){
+    .grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+    .grid div:nth-child(n + 4) {
+        display: block;
+    }
+    .grid div.anuncio {
+        grid-column: auto;
+        grid-row: auto;
+        order: -1;
+    }
+}
